@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hgsBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2B59"/>
+      <stop offset="100%" stop-color="#091A36"/>
+    </linearGradient>
+    <linearGradient id="hgsGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Emblem Circle -->
+  <g transform="translate(4, 4)">
+    <circle cx="36" cy="36" r="36" fill="url(#hgsBlue)" stroke="#1E3A8A" stroke-width="1.5"/>
+    
+    <!-- House / Grid structure outline -->
+    <path d="M 23 34 L 36 21 L 49 34 L 47 43 C 47 49 43 51 36 51 C 29 51 25 49 25 43 Z" 
+          fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          
+    <!-- Power prongs inside -->
+    <line x1="33" y1="28" x2="33" y2="33" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="39" y1="28" x2="39" y2="33" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+    
+    <!-- Lightning zap left and right -->
+    <path d="M 23 37 L 18 39 L 23 43" fill="none" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 49 37 L 54 39 L 49 43" fill="none" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Text HGS -->
+    <text x="36" y="63" font-family="'Inter', 'Montserrat', 'Segoe UI', sans-serif" font-size="9" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">HGS</text>
+  </g>
+  
+  <!-- Company Brand Text -->
+  <g transform="translate(90, 24)">
+    <text x="0" y="16" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="19" font-weight="800" fill="#0F172A" letter-spacing="-0.5">
+      HOCAOĞLU <tspan fill="#0284C7">GÜÇ SİSTEMLERİ</tspan>
+    </text>
+    <text x="1" y="34" font-family="'Inter', 'Segoe UI', system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#64748B" letter-spacing="1.2">
+      PROJE VE DANIŞMANLIK A.Ş.
+    </text>
+  </g>
+</svg>
