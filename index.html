@@ -46,8 +46,7 @@
 
       <ul class="nav-menu" id="navMenu">
         <li><a href="#cozumler" class="nav-link">Çözümlerimiz</a></li>
-        <li><a href="#simulasyon" class="nav-link">Arıza Simülatörü</a></li>
-        <li><a href="#hakkimizda" class="nav-link">Kurucular</a></li>
+        <li><a href="#hakkimizda" class="nav-link">Ekibimiz</a></li>
         <li><a href="#basinda-biz" class="nav-link">Basında Biz</a></li>
         <li><a href="#iletisim" class="nav-cta-btn">İletişime Geç</a></li>
       </ul>
@@ -342,87 +341,7 @@
     </div>
   </section>
 
-  <!-- ========================================================================
-       İNTERAKTİF SİMÜLATÖR (MÜHENDİSLİK GÖSTERİMİ)
-       ======================================================================== -->
-  <section class="section section-bg-dark" id="simulasyon">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag light">İnteraktif Simülatör</span>
-        <h2 class="section-title">TRACE Algoritması ve Mesafe Tahmin Modeli</h2>
-        <p class="section-subtitle">
-          Şebeke parametrelerini değiştirerek özgün arıza konumu hesaplama hassasiyetimizi canlı deneyimleyin.
-        </p>
-      </div>
 
-      <div class="simulator-box">
-        <div class="sim-controls">
-          <div class="sim-group">
-            <label class="sim-label" for="simFeederLength">
-              <span>Fider Toplam Hat Uzunluğu:</span>
-              <span class="sim-val" id="simFeederLengthVal">31 km</span>
-            </label>
-            <input type="range" id="simFeederLength" class="sim-range" min="5" max="60" step="1" value="31">
-          </div>
-
-          <div class="sim-group">
-            <label class="sim-label" for="simFaultType">
-              <span>Arıza Tipi:</span>
-            </label>
-            <select id="simFaultType" class="sim-select">
-              <option value="single-phase">Tek Faz - Toprak Arızası (En Yaygın)</option>
-              <option value="phase-phase">Faz - Faz Arızası</option>
-              <option value="transient">Geçici Ark / Kuş Teması</option>
-            </select>
-          </div>
-
-          <div class="sim-group">
-            <label class="sim-label" for="simNoiseLevel">
-              <span>Şebeke Gürültü / Dengesizlik Oranı:</span>
-              <span class="sim-val" id="simNoiseLevelVal">%5</span>
-            </label>
-            <input type="range" id="simNoiseLevel" class="sim-range" min="1" max="20" step="1" value="5">
-          </div>
-
-          <p style="font-size: 0.82rem; color: #94a3b8; line-height: 1.5; margin-top: 0.5rem;">
-            * Hesaplamalar, rölelerin negatif sıra empedans matrisleri ve dal-budak şebeke topoğrafyası esas alınarak anlık koşturulur.
-          </p>
-        </div>
-
-        <div class="sim-display">
-          <div>
-            <div class="sim-display-header">
-              <span style="font-size: 0.85rem; font-family: var(--font-mono); color: #94a3b8;">ALGORİTMA DURUMU: COMTRADE AKTİF</span>
-              <div class="sim-status-indicator">
-                <span class="status-beacon"></span>
-                <span>Canlı Analiz</span>
-              </div>
-            </div>
-
-            <div class="sim-result-grid">
-              <div class="sim-result-card">
-                <div class="sim-result-label">Tahmini Arıza Noktası</div>
-                <div class="sim-result-value" id="simCalcDistance">21.08 km</div>
-              </div>
-              <div class="sim-result-card">
-                <div class="sim-result-label">Algoritma Güven Skoru</div>
-                <div class="sim-result-value" id="simCalcAccuracy">%99.4</div>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.4rem; font-family: var(--font-mono);">
-              DALGA FORMU &amp; TEKİL HATA İMPULSU (TRACE)
-            </div>
-            <div class="sim-graph-canvas" id="simGraph">
-              <!-- JS ile dinamik çizilir -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========================================================================
        KURUCULAR VE AKADEMİK DANIŞMANLIK
@@ -476,14 +395,14 @@
           </div>
         </div>
 
-        <!-- KURUCU 2: Mert Bekir Atsever -->
+        <!-- KURUCU 2: Dr. Mert Bekir Atsever -->
         <div class="founder-card">
           <div class="founder-header">
             <div class="founder-avatar-wrap">
-              <div class="founder-avatar-placeholder">MBA</div>
+              <img src="images/dr-mert-bekir-atsever.png" alt="Dr. Mert Bekir Atsever">
             </div>
             <div>
-              <h3 class="founder-name">Mert Bekir Atsever</h3>
+              <h3 class="founder-name">Dr. Mert Bekir Atsever</h3>
               <div class="founder-role">Kurucu Ortak &amp; Ar-Ge Direktörü</div>
               <div class="founder-inst">Güç Sistemleri &amp; Yazılım Araştırmacısı</div>
             </div>
@@ -511,6 +430,89 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
               YÖK Akademik
             </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           PROJE EKİBİ
+           ==================================================================== -->
+      <div style="margin-top: 4rem;">
+        <div style="text-align: center; margin-bottom: 2.2rem;">
+          <span class="section-tag">Mühendislik &amp; Geliştirme</span>
+          <h3 style="font-size: 1.75rem; font-weight: 700; color: var(--color-slate-900); margin-top: 0.5rem;">Proje Ekibi</h3>
+          <p style="color: var(--color-slate-600); font-size: 0.95rem; max-width: 620px; margin: 0.5rem auto 0;">
+            Şebeke analiz algoritmaları, gömülü yazılım ve donanım geliştirme süreçlerinde görev alan Ar-Ge ekibimiz.
+          </p>
+        </div>
+
+        <div class="founders-grid">
+          <!-- EKİP ÜYESİ 1: Mehmet Köse -->
+          <div class="founder-card">
+            <div class="founder-header">
+              <div class="founder-avatar-wrap">
+                <div class="founder-avatar-placeholder" style="background: linear-gradient(135deg, #1e3a8a, #0284c7); color: white; font-weight: 700; font-size: 1.1rem;">MK</div>
+              </div>
+              <div>
+                <h3 class="founder-name">Mehmet Köse</h3>
+                <div class="founder-role">Yazılım &amp; Ar-Ge Mühendisi</div>
+                <div class="founder-inst">Gebze Teknik Üni. / MSÜ</div>
+              </div>
+            </div>
+
+            <p class="founder-bio">
+              EPDK-HGS projeleri kapsamında enerji iletim ve dağıtım hatları arıza tespit sistemleri, CBS (GIS) veri modelleme, gömülü yazılım ve gerçek zamanlı sinyal işleme mimarileri geliştirmektedir.
+            </p>
+
+            <div class="founder-credentials">
+              <strong>Uzmanlık Alanları:</strong>
+              <ul>
+                <li>CBS Tabanlı Şebeke Modelleme &amp; Graf Analizleri</li>
+                <li>Gömülü Sistemler (FreeRTOS, STM32, ARM)</li>
+                <li>Röle COMTRADE Veri İşleme &amp; Haberleşme Protokolleri</li>
+              </ul>
+            </div>
+
+            <div class="founder-links">
+              <a href="https://www.linkedin.com/in/mehmet-k%C3%B6se-74067a202/" target="_blank" rel="noopener noreferrer" class="btn-scholar" style="background: #0077b5; color: #fff; border-color: #0077b5;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn Profili
+              </a>
+            </div>
+          </div>
+
+          <!-- EKİP ÜYESİ 2: Toprak Alp Köse -->
+          <div class="founder-card">
+            <div class="founder-header">
+              <div class="founder-avatar-wrap">
+                <div class="founder-avatar-placeholder" style="background: linear-gradient(135deg, #0f766e, #14b8a6); color: white; font-weight: 700; font-size: 1.1rem;">TK</div>
+              </div>
+              <div>
+                <h3 class="founder-name">Toprak Alp Köse</h3>
+                <div class="founder-role">Ar-Ge &amp; Sistem Mühendisi</div>
+                <div class="founder-inst">Hocaoğlu Güç Sistemleri Proje Ekibi</div>
+              </div>
+            </div>
+
+            <p class="founder-bio">
+              Akıllı şebeke izleme sistemleri, saha veri toplama mimarileri, yüksek frekanslı ölçüm ve donanım/yazılım entegrasyonu süreçlerinde araştırmacı olarak görev almaktadır.
+            </p>
+
+            <div class="founder-credentials">
+              <strong>Uzmanlık Alanları:</strong>
+              <ul>
+                <li>Saha Ölçüm &amp; Sinyal Toplama Donanımları</li>
+                <li>Online Kısmi Deşarj (PD) Sensör Entegrasyonu</li>
+                <li>Veri Analizi &amp; Sistem Test Doğrulama</li>
+              </ul>
+            </div>
+
+            <div class="founder-links">
+              <a href="https://www.linkedin.com/in/toprak-alp-k%C3%B6se-618918198/" target="_blank" rel="noopener noreferrer" class="btn-scholar" style="background: #0077b5; color: #fff; border-color: #0077b5;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                LinkedIn Profili
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -681,14 +683,13 @@
             <li><a href="#cozumler">Online PD Cihazı</a></li>
             <li><a href="#cozumler">Havai Hat Arıza Yazılımı</a></li>
             <li><a href="#cozumler">Online Tan(δ)-AI Yazılımı</a></li>
-            <li><a href="#simulasyon">TRACE Arıza Simülatörü</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-title">Kurumsal</h4>
           <ul class="footer-nav">
-            <li><a href="#hakkimizda">Kurucular &amp; Kadro</a></li>
+            <li><a href="#hakkimizda">Yönetim &amp; Proje Ekibi</a></li>
             <li><a href="#basinda-biz">Basında Biz</a></li>
             <li><a href="https://www.linkedin.com/in/hocao%C4%9Flu-g%C3%BC%C3%A7-sistemleri-proje-dan%C4%B1%C5%9Fmanl%C4%B1k-097a293aa/" target="_blank" rel="noopener noreferrer">LinkedIn Sayfamız</a></li>
             <li><a href="#iletisim">İletişim</a></li>

@@ -69,76 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 3. Interactive Power System / Fault Distance Simulator
-  const feederLengthInput = document.getElementById('simFeederLength');
-  const feederLengthVal = document.getElementById('simFeederLengthVal');
-  const faultTypeSelect = document.getElementById('simFaultType');
-  const noiseLevelInput = document.getElementById('simNoiseLevel');
-  const noiseLevelVal = document.getElementById('simNoiseLevelVal');
-
-  const calcDistanceEl = document.getElementById('simCalcDistance');
-  const calcAccuracyEl = document.getElementById('simCalcAccuracy');
-  const simGraphEl = document.getElementById('simGraph');
-
-  function updateSimulation() {
-    if (!feederLengthInput) return;
-
-    const lengthKm = parseFloat(feederLengthInput.value);
-    const noise = parseFloat(noiseLevelInput.value);
-    const faultType = faultTypeSelect ? faultTypeSelect.value : 'single-phase';
-
-    feederLengthVal.textContent = `${lengthKm} km`;
-    noiseLevelVal.textContent = `%${noise}`;
-
-    // Calculate simulated fault location based on algorithm
-    // In our algorithm TRACE with negative sequence impedance:
-    const nominalFaultRatio = 0.68; // ~68% along the line
-    const baseDistanceMeters = lengthKm * 1000 * nominalFaultRatio;
-    
-    // Deviation is tiny: ~400 meters on 31 km
-    const deviationMeters = Math.round((noise / 10) * (lengthKm / 31) * 200);
-    const estimatedDistanceMeters = Math.round(baseDistanceMeters + (deviationMeters * 0.4));
-    
-    const accuracyPercent = Math.max(98.5, (99.8 - (noise * 0.08))).toFixed(1);
-
-    calcDistanceEl.textContent = `${(estimatedDistanceMeters / 1000).toFixed(2)} km (${estimatedDistanceMeters} m)`;
-    calcAccuracyEl.textContent = `%${accuracyPercent}`;
-
-    // Render bar waveform simulation in canvas
-    if (simGraphEl) {
-      simGraphEl.innerHTML = '';
-      const totalBars = 36;
-      const faultBarIndex = Math.floor((nominalFaultRatio) * totalBars);
-
-      for (let i = 0; i < totalBars; i++) {
-        const bar = document.createElement('div');
-        bar.className = 'sim-bar';
-
-        let height = 15 + Math.random() * 20;
-        if (Math.abs(i - faultBarIndex) <= 1) {
-          // Fault spike
-          height = 80 + Math.random() * 15;
-          bar.style.backgroundColor = '#38bdf8';
-          bar.style.boxShadow = '0 0 10px #38bdf8';
-        } else if (i > faultBarIndex) {
-          height = 10 + Math.random() * 12;
-        }
-
-        bar.style.height = `${height}%`;
-        simGraphEl.appendChild(bar);
-      }
-    }
-  }
-
-  if (feederLengthInput && noiseLevelInput && faultTypeSelect) {
-    feederLengthInput.addEventListener('input', updateSimulation);
-    noiseLevelInput.addEventListener('input', updateSimulation);
-    faultTypeSelect.addEventListener('change', updateSimulation);
-    // Initial run
-    updateSimulation();
-  }
-
-  // 4. Contact Form Handling
+  // 3. Contact Form Handling
   const contactForm = document.getElementById('contactForm');
   const formSuccessAlert = document.getElementById('formSuccessAlert');
 
